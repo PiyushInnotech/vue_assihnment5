@@ -4,10 +4,8 @@
   </div>
 </template>
 <script>
-
 export default {
-  name: 'aboutView',
-  components: {
-  }
-}
+  name: "aboutView",
+  components: {},
+};
 </script>
