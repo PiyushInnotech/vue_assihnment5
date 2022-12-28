@@ -1,14 +1,16 @@
 <template>
   <div class="jobs">
+    <router-link to="/jobs"></router-link>
     <h1 class="jobsHead">JOBS</h1>
     <div class="jobWrapper">
       <div v-for="job in jobs" :key="job.id" class="jobHead">
-        <router-link :to="{ name: 'jobDetails', params: { id: job.id } }"
-          ><h2>{{ job.title }}</h2></router-link
-        >
+        <router-link :to="{ name: 'jobId', params:{ jobId: job.id } }">
+          <h2>{{ job.title }}</h2>
+        </router-link>
       </div>
     </div>
   </div>
+  <router-view></router-view>
 </template>
 <script>
 export default {
